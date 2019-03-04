@@ -66,6 +66,20 @@ public class StockManager
     }
     
     /**
+     * Try to find a product in stock with the given name.
+     * @return The identified product, or null if there is none
+     *          with a matching ID.
+     */
+    public Product findProduct (String name)
+    {
+        for(Product product : stock) {
+            if(name.equalsIgnoreCase(product.getName())){
+                return product;
+            }
+        }
+        return null;
+    }
+    /**
      * Locate a product with the given ID, and return how
      * many of this item are in stock. If the ID does not
      * match any product, return zero.
@@ -97,7 +111,7 @@ public class StockManager
      * Print details of all products with stock levels
      * below a given value.
      * @param limit The upper limit of product quantity 
-     * to check for (exclusive).
+     *          to check for (exclusive).
      */
     public void printLowStock(int limit)
     {
