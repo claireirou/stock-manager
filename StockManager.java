@@ -47,6 +47,11 @@ public class StockManager
      */
     public Product findProduct(int id)
     {
+        for(Product product : stock) {
+            if(id == product.getID()){
+                return product;
+            }
+        }
         return null;
     }
     
