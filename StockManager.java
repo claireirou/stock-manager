@@ -88,4 +88,19 @@ public class StockManager
             System.out.println(it.next().toString());
         }
     }
+    
+    /**
+     * Print details of all products with stock levels
+     * below a given value.
+     * @param limit The upper limit of product quantity 
+     * to check for (exclusive).
+     */
+    public void printLowStock(int limit)
+    {
+        for(Product product : stock) {
+            if(product.getQuantity() < limit){
+                System.out.println(product.toString());
+            }
+        }
+    }
 }
