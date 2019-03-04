@@ -1,4 +1,5 @@
 import java.util.ArrayList;
+import java.util.Iterator;
 
 /**
  * Manage the stock in a business.
@@ -66,5 +67,9 @@ public class StockManager
      */
     public void printProductDetails()
     {
+        Iterator<Product> it = stock.iterator();
+        while(it.hasNext()) {
+            System.out.println(it.next().toString());
+        }
     }
 }
