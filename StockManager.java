@@ -79,6 +79,7 @@ public class StockManager
         }
         return null;
     }
+    
     /**
      * Locate a product with the given ID, and return how
      * many of this item are in stock. If the ID does not
