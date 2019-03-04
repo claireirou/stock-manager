@@ -27,7 +27,11 @@ public class StockManager
      */
     public void addProduct(Product item)
     {
-        stock.add(item);
+        if(!stock.contains(item)) {
+            stock.add(item);
+        } else {
+            System.out.println("This product already exists!");
+        }
     }
     
     /**
