@@ -38,6 +38,12 @@ public class StockManager
      */
     public void delivery(int id, int amount)
     {
+        Product product = findProduct(id);
+        if(product != null) {
+            product.increaseQuantity(amount);
+        } else {
+            System.out.println("Product not found!");
+        }
     }
     
     /**
